@@ -1,15 +1,25 @@
-import '../public/css/styles.css';
-
+import { FavIcons } from '@volvo-cars/favicons/react';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import React from 'react';
+import Navbar from 'src/components/Navbar';
+import { StyleProvider, ThemePicker } from 'vcc-ui';
 
-import { HelloWorld } from '../src/components/HelloWorld';
-
-function HomePage() {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <React.StrictMode>
-      <HelloWorld />
-    </React.StrictMode>
+    <>
+      <Head>
+        <title>Volvo Cars</title>
+        <FavIcons />
+      </Head>
+      <React.StrictMode>
+        <StyleProvider>
+          <ThemePicker variant="light">
+            <Navbar />
+            <Component {...pageProps} />
+          </ThemePicker>
+        </StyleProvider>
+      </React.StrictMode>
+    </>
   );
 }
-
-export default HomePage;
