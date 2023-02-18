@@ -12,3 +12,5 @@ export const getCarsByBodyType = (cars: Cars, bodyType: string) => {
   }
   return null;
 };
+
+export const getCarById = (cars: Cars, id: string) => cars.find((car) => car.id === id);

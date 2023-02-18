@@ -8,10 +8,10 @@ export type Car = {
 
 export type Cars = Car[];
 
-export interface CardProps {
+export interface CarProp {
   car: Car;
 }
 
-export interface FilterTabsProps {
+export interface CarsProp {
   cars: Cars;
 }
