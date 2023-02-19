@@ -2,8 +2,11 @@
   "name": "frontend-code-test",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
+  },
   "dependencies": {
-    "@types/react": "^17.0.0",
     "@types/react-slick": "^0.23.10",
     "@types/styled-components": "^5.1.26",
     "@volvo-cars/favicons": "^4.2.1",
