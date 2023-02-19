@@ -14,9 +14,7 @@ import CardUnit from '../components/CardUnit';
 export const Carousel = ({ cars }: { cars: Cars | null }) => {
   const slider = React.useRef<Slider>(null);
   return (
-    <div
-      data-test-name="carousel"
-      style={{ marginTop: '10px', marginRight: '10px', marginLeft: '10px' }}>
+    <div data-test-name="carousel">
       <Slider ref={slider} {...carouselConfig}>
         {cars?.map((car, index) => (
           <CardUnit key={index} car={car} />

@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// no explicit any is diabled here because of sending bad types intentionally
+// to test unhappy scenarios
 import { expect } from '@jest/globals';
 
 import { getCarById, getCarsByBodyType, getUniqueBodyTypes } from './functions';

@@ -7,7 +7,7 @@ import CardCTA from './CardCTA';
 
 export const CardUnit = ({ car }: CarProp) => {
   return (
-    <div className="stack-8" data-test-name="single-card-unit">
+    <div className="stack-8" data-test-name="single-card-unit" style={{ margin: '8px' }}>
       <Card>
         <CardContent>
           <Text variant="bates">{car.bodyType.toUpperCase()}</Text>

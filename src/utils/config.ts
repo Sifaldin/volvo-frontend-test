@@ -20,7 +20,7 @@ export const carouselConfig = {
       breakpoint: 550,
       settings: {
         dots: true,
-        slidesToShow: 1,
+        slidesToShow: 1.5,
         slidesToScroll: 1,
       },
     },
