@@ -1,7 +1,5 @@
 # Volvo Cars (Global Online Digital)
 
-## Front-end coding test (React)
-
 Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
 
 Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
@@ -13,8 +11,6 @@ Here is how the design look like for desktop and mobile (files are stored under 
 ### Mobile
 
 ![ProductListDesktop](./docs/ProductList-Mobile.png)
-
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this:
 
 ```json
 [
@@ -62,3 +58,5 @@ won't break existing or future tests.
 
 **NOTE:** An NPM Package named 'volvocars' was created to share eslint config between applications.
 More can be found here [Github](https://github.com/Sifaldin/volvo-eslint-config) + [NPM](https://www.npmjs.com/package/eslint-config-volvocars)
+
+**NOTE:** Solution have been deployed to Vercel. https://volvo-frontend-task.vercel.app/

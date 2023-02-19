@@ -3,7 +3,7 @@ import { getCarsByBodyType, getUniqueBodyTypes } from 'src/engine/functions';
 import { CarsProp } from 'src/utils/types';
 import { TabNav, TabNavItem } from 'vcc-ui';
 
-import CarCarousel from './Carousel';
+import Carousel from './Carousel';
 
 export const FilterTabs = ({ cars }: CarsProp) => {
   const [active, setActive] = useState(0);
@@ -27,7 +27,7 @@ export const FilterTabs = ({ cars }: CarsProp) => {
         })}
       </TabNav>
 
-      <CarCarousel cars={getCarsByBodyType(cars, bodyType)} />
+      <Carousel cars={getCarsByBodyType(cars, bodyType)} />
     </div>
   );
 };

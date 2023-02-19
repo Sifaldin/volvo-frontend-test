@@ -15,3 +15,8 @@ export interface CarProp {
 export interface CarsProp {
   cars: Cars;
 }
+
+export interface ArrowProp {
+  className?: string;
+  onClick?: () => void;
+}
