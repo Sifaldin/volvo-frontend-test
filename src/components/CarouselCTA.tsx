@@ -4,7 +4,7 @@ import { Block, IconButton } from 'vcc-ui';
 
 export const CarouselCTA = ({ next, previous, carouselState }: ButtonGroupProps) => {
   const state = carouselState;
-  if (state) {
+  if (state && previous && next) {
     const previousDisabled = state?.currentSlide === 0;
     const nextDisabled = state.currentSlide + state.slidesToShow >= state.totalItems;
     const isHidden = state.deviceType === 'mobile';
@@ -16,24 +16,32 @@ export const CarouselCTA = ({ next, previous, carouselState }: ButtonGroupProps)
     return (
       <div
         style={{
+          display: 'flex',
+          flexDirection: 'row',
           position: 'fixed',
           right: '20px',
         }}>
-        <IconButton
-          onClick={() => previous && previous()}
-          disabled={previousDisabled}
-          aria-label="previous"
-          iconName="navigation-chevronback"
-          variant="outline"
-        />
-
-        <IconButton
-          onClick={() => next && next()}
-          disabled={nextDisabled}
-          aria-label="next"
-          iconName="navigation-chevronforward"
-          variant="outline"
-        />
+        <div
+          style={{
+            marginRight: '20px',
+          }}>
+          <IconButton
+            onClick={previous}
+            disabled={previousDisabled}
+            aria-label="previous"
+            iconName="navigation-chevronback"
+            variant="outline"
+          />
+        </div>
+        <div>
+          <IconButton
+            onClick={next}
+            disabled={nextDisabled}
+            aria-label="next"
+            iconName="navigation-chevronforward"
+            variant="outline"
+          />
+        </div>
       </div>
     );
   }
