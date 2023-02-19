@@ -2,7 +2,9 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import Navbar from 'src/components/Navbar';
-import { StyleProvider, ThemePicker } from 'vcc-ui';
+import { StyleProvider, styleRenderer, ThemePicker } from 'vcc-ui';
+
+const renderer = styleRenderer();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Volvo Cars</title>
       </Head>
-      <StyleProvider>
+      <StyleProvider renderer={renderer}>
         <ThemePicker variant="light">
           <Navbar />
           <Component {...pageProps} />
