@@ -31,9 +31,13 @@ export const Carousel = ({ cars }: { cars: Cars | null }) => {
         setDisableRight(true);
       }
     },
-    beforeChange: () => {
-      setDisableLeft(false);
-      setDisableRight(false);
+    beforeChange: (_: number, next: number) => {
+      if (cars && next === cars?.length - 4) {
+        setDisableRight(true);
+      } else {
+        setDisableLeft(false);
+        setDisableRight(false);
+      }
     },
   };
   const slider = React.useRef<Slider>(null);
