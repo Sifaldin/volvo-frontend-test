@@ -16,7 +16,7 @@ export const carouselConfig = {
       },
     },
     {
-      breakpoint: 780,
+      breakpoint: 1000,
       settings: {
         arrows: false,
         slidesToShow: 2,

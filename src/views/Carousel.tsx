@@ -18,13 +18,13 @@ export const Carousel = ({ cars }: { cars: Cars | null }) => {
     nextArrow: <RightArrow />,
   };
   return (
-    <Block extend={{ padding: '2rem 1rem' }}>
+    <div style={{ padding: '2rem 1rem' }} data-test-name="carousel">
       <Slider {...carouselConfigWithCustomArrows}>
         {cars?.map((car, index) => (
           <CardUnit key={index} car={car} />
         ))}
       </Slider>
-    </Block>
+    </div>
   );
 };
 

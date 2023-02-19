@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { expect } from '@jest/globals';
+
 import { getCarById, getCarsByBodyType, getUniqueBodyTypes } from './functions';
 
 describe('Filter functions - happy scenario', () => {
@@ -107,7 +110,7 @@ describe('Filter functions - happy scenario', () => {
   });
 });
 describe('Filter functions - unhappy scenario', () => {
-  const badData = {
+  const badData: any = {
     id: {
       id: '',
       modelName: '',
@@ -120,7 +123,7 @@ describe('Filter functions - unhappy scenario', () => {
     imageUrl: '',
   };
 
-  const emptyArray = [];
+  const emptyArray: any[] = [];
   it('getUniqueBodyTypes returns null on bad data or empty array', () => {
     expect(getUniqueBodyTypes(badData)).toBeNull();
     expect(getUniqueBodyTypes(emptyArray)).toBeNull();

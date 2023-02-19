@@ -4,7 +4,9 @@ import { Block, Link } from 'vcc-ui';
 
 export const CardCTA = ({ car }: CarProp) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+    <div
+      data-test-name="card-actions"
+      style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
       <Block extend={{ marginRight: 30 }}>
         <Link href={`/learn/${car.id}`} arrow="right">
           Learn

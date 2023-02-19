@@ -13,7 +13,7 @@ const LeftArrow = ({ className, onClick }: ArrowProp) => {
           position: 'fixed',
           left: '50px',
         }}>
-        <div>
+        <div data-test-name="carousel-left-arrow">
           <IconButton
             onClick={onClick}
             disabled={className.includes('slick-disabled')}

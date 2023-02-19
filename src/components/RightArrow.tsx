@@ -13,7 +13,7 @@ export const RightArrow = ({ className, onClick }: ArrowProp) => {
           position: 'fixed',
           right: '100px',
         }}>
-        <div>
+        <div data-test-name="carousel-right-arrow">
           <IconButton
             onClick={onClick}
             disabled={className.includes('slick-disabled')}

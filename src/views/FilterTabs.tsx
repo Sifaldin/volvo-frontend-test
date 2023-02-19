@@ -10,7 +10,7 @@ export const FilterTabs = ({ cars }: CarsProp) => {
   const [bodyType, setBodyType] = useState('All');
 
   return (
-    <div className="stack-8">
+    <div className="stack-8" data-test-name="filter-tabs">
       <TabNav enableLineTransition>
         {getUniqueBodyTypes(cars)?.map((bodyType, index) => {
           return (
