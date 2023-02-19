@@ -3,11 +3,11 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import React from 'react';
 import Slider from 'react-slick';
-import ArrowsWrapper from 'src/components/ArrowsWrapper';
 import LeftArrow from 'src/components/LeftArrow';
 import RightArrow from 'src/components/RightArrow';
 import { carouselConfig } from 'src/engine/config';
 import { Cars } from 'src/utils/types';
+import { Block } from 'vcc-ui';
 
 import CardUnit from '../components/CardUnit';
 
@@ -22,10 +22,19 @@ export const Carousel = ({ cars }: { cars: Cars | null }) => {
           <CardUnit key={index} car={car} />
         ))}
       </Slider>
-      <ArrowsWrapper>
+      <Block
+        extend={{
+          marginTop: 20,
+          display: 'flex',
+          position: 'fixed',
+          right: 50,
+          '@media (max-width: 950px)': {
+            display: 'none',
+          },
+        }}>
         <LeftArrow onClick={() => slider?.current?.slickPrev()} />
         <RightArrow onClick={() => slider?.current?.slickNext()} />
-      </ArrowsWrapper>
+      </Block>
     </div>
   );
 };
