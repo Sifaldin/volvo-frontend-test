@@ -1,61 +1,66 @@
-import 'react-multi-carousel/lib/styles.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import React, { useEffect, useRef } from 'react';
-import Carousel, { ResponsiveType } from 'react-multi-carousel';
+import React from 'react';
+import Slider from 'react-slick';
 import { Cars } from 'src/utils/types';
 import { Block } from 'vcc-ui';
 
-import { CarouselCTA } from './CarouselCTA';
 import CarsCard from './CarsCard';
+import LeftArrow from './LeftArrow';
+import RightArrow from './RightArrow';
 
-const responsive: ResponsiveType = {
-  desktop: {
-    breakpoint: { max: Infinity, min: 1024 },
-    items: 4,
-    slidesToSlide: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 2,
-    slidesToSlide: 1,
-  },
-  mobile: {
-    breakpoint: { max: 768, min: 0 },
-    items: 1,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 90,
-  },
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  prevArrow: <LeftArrow />,
+  nextArrow: <RightArrow />,
+  responsive: [
+    {
+      breakpoint: 2000,
+      settings: {
+        arrows: true,
+        slidesToScroll: 1,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      },
+    },
+  ],
 };
 
 export const CarCarousel = ({ cars }: { cars: Cars | null }) => {
-  const ref = useRef<Carousel>(null);
-
-  useEffect(() => {
-    ref.current?.goToSlide(0);
-  }, [cars]);
-
   return (
     <Block extend={{ padding: '2rem 1rem' }}>
-      <Carousel
-        ref={ref}
-        draggable
-        pauseOnHover
-        minimumTouchDrag={80}
-        partialVisible={true}
-        responsive={responsive}
-        arrows={false}
-        renderButtonGroupOutside={true}
-        customButtonGroup={<CarouselCTA />}
-        showDots={false}
-        renderDotsOutside={true}
-        ssr={true}
-        deviceType={'desktop'}>
+      <Slider {...settings}>
         {cars?.map((car, index) => (
           <Block key={index} extend={{ margin: 5 }}>
             <CarsCard key={index} car={car} />
           </Block>
         ))}
-      </Carousel>
+      </Slider>
     </Block>
   );
 };

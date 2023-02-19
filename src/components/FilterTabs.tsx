@@ -1,13 +1,9 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import React, { useState } from 'react';
 import { getCarsByBodyType, getUniqueBodyTypes } from 'src/engine/functions';
 import { CarsProp } from 'src/utils/types';
-import { Grid, Row, TabNav, TabNavItem } from 'vcc-ui';
+import { TabNav, TabNavItem } from 'vcc-ui';
 
 import CarCarousel from './CarCarousel';
-import CarsCard from './CarsCard';
 
 export const FilterTabs = ({ cars }: CarsProp) => {
   const [active, setActive] = useState(0);
