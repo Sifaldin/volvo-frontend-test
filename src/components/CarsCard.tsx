@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { CarProp } from 'src/utils/types';
-import { Card, CardContent, Flex, Spacer, Text } from 'vcc-ui';
+import { Card, CardContent, Flex, Text } from 'vcc-ui';
 
 import CardCTA from './CardCTA';
 

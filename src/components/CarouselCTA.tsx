@@ -14,35 +14,27 @@ export const CarouselCTA = ({ next, previous, carouselState }: ButtonGroupProps)
     }
 
     return (
-      <Block
-        extend={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          margin: 5,
+      <div
+        style={{
+          position: 'fixed',
+          right: '20px',
         }}>
-        <Block
-          extend={{
-            marginRight: 10,
-          }}>
-          <IconButton
-            onClick={() => previous && previous()}
-            disabled={previousDisabled}
-            aria-label="previous"
-            iconName="navigation-chevronback"
-            variant="outline"
-          />
-        </Block>
+        <IconButton
+          onClick={() => previous && previous()}
+          disabled={previousDisabled}
+          aria-label="previous"
+          iconName="navigation-chevronback"
+          variant="outline"
+        />
 
-        <Block>
-          <IconButton
-            onClick={() => next && next()}
-            disabled={nextDisabled}
-            aria-label="next"
-            iconName="navigation-chevronforward"
-            variant="outline"
-          />
-        </Block>
-      </Block>
+        <IconButton
+          onClick={() => next && next()}
+          disabled={nextDisabled}
+          aria-label="next"
+          iconName="navigation-chevronforward"
+          variant="outline"
+        />
+      </div>
     );
   }
   return null;

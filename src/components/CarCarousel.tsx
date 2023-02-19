@@ -46,7 +46,7 @@ export const CarCarousel = ({ cars }: { cars: Cars | null }) => {
         arrows={false}
         renderButtonGroupOutside={true}
         customButtonGroup={<CarouselCTA />}
-        showDots={true}
+        showDots={false}
         renderDotsOutside={true}
         ssr={true}
         deviceType={'desktop'}>
