@@ -1,4 +1,6 @@
-export const carouselConfig = {
+import { Settings } from 'react-slick';
+
+export const carouselConfig: Settings = {
   dots: false,
   arrows: false,
   infinite: false,
