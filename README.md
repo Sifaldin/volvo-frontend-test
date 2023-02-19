@@ -44,19 +44,27 @@ Two extra SVG icons are also provided by our designer which are stored under `do
 ## Dev Setup
 
 ## Install dependencies via:
+
 ```
 yarn install
 ```
 
 ## Running cypress
+
+![cypress](./docs/cypress-open.png)
+
 ```
 yarn dev-cypress
 ```
 
-**NOTE:** Component have Husky set up on pre-push to ensure that changes done 
+**NOTE:** Component have Husky set up on pre-push to ensure that changes done
 won't break existing or future tests.
+![HuskyLint](./docs/husky-lint.png)
+![HuskyTest](./docs/husky-tests.png)
 
 **NOTE:** An NPM Package named 'volvocars' was created to share eslint config between applications.
 More can be found here [Github](https://github.com/Sifaldin/volvo-eslint-config) + [NPM](https://www.npmjs.com/package/eslint-config-volvocars)
 
 **NOTE:** Solution have been deployed to Vercel. https://volvo-frontend-task.vercel.app/
+
+![Recording](./docs/iphone.gif)
