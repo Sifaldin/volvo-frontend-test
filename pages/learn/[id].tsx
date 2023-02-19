@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import CarsCard from 'src/components/CarsCard';
 import { getCarById } from 'src/engine/functions';
 import { CarProp } from 'src/utils/types';
+import CardUnit from 'src/views/CardUnit';
 
 import cars from '../../public/api/cars.json';
 
@@ -14,7 +14,7 @@ const Learn = ({ car }: CarProp) => {
         <title>{car.modelName}</title>
       </Head>
       <h1>Learn more about this specific car</h1>
-      <CarsCard car={car} />
+      <CardUnit car={car} />
     </>
   );
 };

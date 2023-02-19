@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
-import FilterTabs from 'src/components/FilterTabs';
 import { CarsProp } from 'src/utils/types';
+import FilterTabs from 'src/views/FilterTabs';
 
 import cars from '../public/api/cars.json';
 

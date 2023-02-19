@@ -6,9 +6,9 @@ import Slider from 'react-slick';
 import { Cars } from 'src/utils/types';
 import { Block } from 'vcc-ui';
 
-import CarsCard from './CarsCard';
-import LeftArrow from './LeftArrow';
-import RightArrow from './RightArrow';
+import LeftArrow from '../components/LeftArrow';
+import RightArrow from '../components/RightArrow';
+import CardUnit from './CardUnit';
 
 const settings = {
   dots: true,
@@ -51,13 +51,13 @@ const settings = {
   ],
 };
 
-export const CarCarousel = ({ cars }: { cars: Cars | null }) => {
+export const Carousel = ({ cars }: { cars: Cars | null }) => {
   return (
     <Block extend={{ padding: '2rem 1rem' }}>
       <Slider {...settings}>
         {cars?.map((car, index) => (
           <Block key={index} extend={{ margin: 5 }}>
-            <CarsCard key={index} car={car} />
+            <CardUnit key={index} car={car} />
           </Block>
         ))}
       </Slider>
@@ -65,4 +65,4 @@ export const CarCarousel = ({ cars }: { cars: Cars | null }) => {
   );
 };
 
-export default CarCarousel;
+export default Carousel;

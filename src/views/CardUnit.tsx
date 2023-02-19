@@ -3,9 +3,9 @@ import React from 'react';
 import { CarProp } from 'src/utils/types';
 import { Card, CardContent, Flex, Text } from 'vcc-ui';
 
-import CardCTA from './CardCTA';
+import CardCTA from '../components/CardCTA';
 
-export const CarsCard = ({ car }: CarProp) => {
+export const CardUnit = ({ car }: CarProp) => {
   return (
     <div className="stack-8">
       <Card>
@@ -30,4 +30,4 @@ export const CarsCard = ({ car }: CarProp) => {
   );
 };
 
-export default CarsCard;
+export default CardUnit;

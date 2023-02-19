@@ -1,6 +1,6 @@
 import React from 'react';
 import { CarProp } from 'src/utils/types';
-import { Block, Flex, Link } from 'vcc-ui';
+import { Block, Link } from 'vcc-ui';
 
 export const CardCTA = ({ car }: CarProp) => {
   return (
