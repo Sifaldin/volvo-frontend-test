@@ -1,24 +1,15 @@
-import { GetStaticProps } from 'next';
 import React from 'react';
-import { CarsProp } from 'src/utils/types';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import FilterTabs from 'src/views/FilterTabs';
 
-import cars from '../public/api/cars.json';
+const ProductsPage = () => {
+  const queryClient = new QueryClient();
 
-const ProductsPage = ({ cars }: CarsProp) => {
   return (
-    <>
-      <FilterTabs cars={cars} />
-    </>
+    <QueryClientProvider client={queryClient}>
+      <FilterTabs />
+    </QueryClientProvider>
   );
 };
 
 export default ProductsPage;
-
-export const getStaticProps: GetStaticProps<CarsProp> = async () => {
-  return {
-    props: {
-      cars,
-    },
-  };
-};

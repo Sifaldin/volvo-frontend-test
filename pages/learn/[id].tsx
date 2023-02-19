@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import CardUnit from 'src/components/CardUnit';
-import { getCarById } from 'src/engine/functions';
+import { getCarById } from 'src/utils/functions';
 import { CarProp } from 'src/utils/types';
 
 import cars from '../../public/api/cars.json';

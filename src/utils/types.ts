@@ -6,7 +6,7 @@ export type Car = {
   imageUrl: string;
 };
 
-export type Cars = Car[];
+export type Cars = Car[] | undefined;
 
 export interface CarProp {
   car: Car;
@@ -18,4 +18,8 @@ export interface CarsProp {
 
 export interface ArrowProp {
   onClick: () => void;
+}
+
+export enum QueryKeys {
+  GET_CARS = 'get_cars',
 }

@@ -64,6 +64,7 @@ won't break existing or future tests.
 
 **NOTE:** An NPM Package named 'volvocars' was created to share eslint config between applications.
 More can be found here [Github](https://github.com/Sifaldin/volvo-eslint-config) + [NPM](https://www.npmjs.com/package/eslint-config-volvocars)
+[![NPM](https://img.shields.io/npm/v/eslint-config-volvocars)](https://www.npmjs.com/package/eslint-config-volvocars) ![npm downloads](https://img.shields.io/npm/dt/eslint-config-volvocars) ![license](https://img.shields.io/npm/l/eslint-config-volvocars)
 
 **NOTE:** Solution have been deployed to Vercel. https://volvo-frontend-task.vercel.app/
 

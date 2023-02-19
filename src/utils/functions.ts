@@ -15,3 +15,13 @@ export const getCarsByBodyType = (cars: Cars, bodyType: string) => {
 
 export const getCarById = (cars: Cars, id: string) =>
   Array.isArray(cars) && cars.length > 0 ? cars.find((car) => car.id === id) : null;
+
+export const fetchCars = async (): Promise<Cars> => {
+  try {
+    const res = await fetch('/api/cars.json');
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    console.error('error fetching the list of merchants');
+  }
+};
