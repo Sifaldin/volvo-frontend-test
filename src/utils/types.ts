@@ -18,6 +18,7 @@ export interface CarsProp {
 
 export interface ArrowProp {
   onClick: () => void;
+  disabled: boolean;
 }
 
 export enum QueryKeys {

@@ -13,7 +13,7 @@ export const CardUnit = ({ car }: CarProp) => {
           <Text variant="bates">{car.bodyType.toUpperCase()}</Text>
           <Text subStyle="emphasis">
             {car.modelName}{' '}
-            <Text variant="bates" subStyle="inline-link">
+            <Text variant="bates" subStyle="standard">
               {car.modelType}
             </Text>
           </Text>
