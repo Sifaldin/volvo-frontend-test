@@ -5,7 +5,6 @@ import React from 'react';
 import Slider from 'react-slick';
 import { carouselConfig } from 'src/engine/config';
 import { Cars } from 'src/utils/types';
-import { Block } from 'vcc-ui';
 
 import LeftArrow from '../components/LeftArrow';
 import RightArrow from '../components/RightArrow';
