@@ -3,7 +3,7 @@ import React from 'react';
 import { CarProp } from 'src/utils/types';
 import { Card, CardContent, Flex, Text } from 'vcc-ui';
 
-import CardCTA from '../components/CardCTA';
+import CardCTA from './CardCTA';
 
 export const CardUnit = ({ car }: CarProp) => {
   return (

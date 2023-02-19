@@ -1,0 +1,9 @@
+/*
+* This file is added because makes it super hard to debug styled-components,
+* as you just have an h1 or div and trying to find which one is not working.
+* this will allow our styled components to be rendered with their relavant class names 
+*/
+{
+  "presets": ["next/babel"],
+  "plugins": [["styled-components", { "ssr": true, "displayName": true }]]
+}
