@@ -7,7 +7,10 @@ import CardCTA from './CardCTA';
 
 export const CardUnit = ({ car }: CarProp) => {
   return (
-    <div className="stack-8" data-test-name="single-card-unit" style={{ margin: '8px' }}>
+    <div
+      className="stack-8"
+      data-test-name="single-card-unit"
+      style={{ margin: '8px', maxWidth: '400px' }}>
       <Card>
         <CardContent>
           <Text variant="bates">{car.bodyType.toUpperCase()}</Text>
@@ -22,7 +25,15 @@ export const CardUnit = ({ car }: CarProp) => {
           extend={{
             justifyContent: 'center',
           }}>
-          <Image src={car.imageUrl} alt={`Volvo ${car.modelName}`} width={450} height={350} />
+          <Image
+            alt={`Volvo ${car.modelName}`}
+            src={car.imageUrl}
+            placeholder="blur"
+            blurDataURL="/images/volvo-wordmark-black.svg"
+            priority={car.imageUrl === '/images/xc90_recharge.jpg'}
+            width={366}
+            height={275}
+          />
         </Flex>
       </Card>
       <CardCTA car={car} />

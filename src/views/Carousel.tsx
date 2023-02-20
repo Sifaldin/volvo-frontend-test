@@ -42,7 +42,7 @@ export const Carousel = ({ cars }: { cars: Cars | null }) => {
   };
   const slider = React.useRef<Slider>(null);
   return (
-    <div data-test-name="carousel">
+    <div data-test-name="carousel" style={{ maxWidth: '1600px', margin: 'auto' }}>
       <Slider ref={slider} {...settings}>
         {cars?.map((car, index) => (
           <CardUnit key={index} car={car} />
