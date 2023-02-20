@@ -48,19 +48,21 @@ export const Carousel = ({ cars }: { cars: Cars | null }) => {
           <CardUnit key={index} car={car} />
         ))}
       </Slider>
-      <Block
-        extend={{
-          marginTop: 20,
-          display: 'flex',
-          position: 'fixed',
-          right: 50,
-          '@media (max-width: 950px)': {
-            display: 'none',
-          },
-        }}>
-        <LeftArrow onClick={() => slider?.current?.slickPrev()} disabled={disableLeft} />
-        <RightArrow onClick={() => slider?.current?.slickNext()} disabled={disableRight} />
-      </Block>
+      {cars && cars.length > 4 && (
+        <Block
+          extend={{
+            marginTop: 20,
+            display: 'flex',
+            position: 'fixed',
+            right: 50,
+            '@media (max-width: 950px)': {
+              display: 'none',
+            },
+          }}>
+          <LeftArrow onClick={() => slider?.current?.slickPrev()} disabled={disableLeft} />
+          <RightArrow onClick={() => slider?.current?.slickNext()} disabled={disableRight} />
+        </Block>
+      )}
     </div>
   );
 };
