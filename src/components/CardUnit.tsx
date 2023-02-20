@@ -32,7 +32,7 @@ export const CardUnit = ({ car }: CarProp) => {
             blurDataURL="/images/volvo-wordmark-black.svg"
             priority={car.imageUrl === '/images/xc90_recharge.jpg'}
             width={366}
-            height={275}
+            height={288}
           />
         </Flex>
       </Card>
